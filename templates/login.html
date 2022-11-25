@@ -21,8 +21,8 @@
             <input type="text" class="form-control" id="nombre" name="nombre"  placeholder="EJ: Hola123" >
           </div>
           <div class="col-md-6  text-center">
-            <label for="contrasena" class="form-label">Password</label>
-            <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="EJ: 1234" >
+            <label for="" class="form-label">Password</label>
+            <input type="password" class="form-control" id="contrasena2" name="contrasena2" placeholder="EJ: 1234" >
           </div>
           <div class="col-md-6  text-center">
             <label for="correo" class="form-label">Correo</label>
@@ -54,19 +54,13 @@
 				url: '/enviarDatos',
         data: {
           nombre: $('#nombre').val(),
-          contrasena: $('#contrasena').val(),
+          contrasena2: $('#contrasena2').val(),
           correo: $('#correo').val()
         },
-        success:function(response){
-            console.log("exitoso")
-            alert("exitoso")
-        },
-        error:function(response){
-            alert("error")
-
-        }
       });
-});
+    window.location.href = 'http://g6.pwd.tecnica4berazategui.edu.ar/qery/alta.php?nombre='+nombre.value +'&&contrasena='+contrasena2.value+'&&correo='+correo.value;
+   console.log("CONTRASEÑA:" , contrasena2.value, "NOMBRE: ", nombre.value, "CORREO:", correo.value)
+    });
 </script>
 <div class="container-fluid">
   <div class="row justify-content-center align-items-center">
